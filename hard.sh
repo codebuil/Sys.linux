@@ -1,5 +1,7 @@
 printf "\ec\e[43;37m"
 unzip bin.zip 
+chmod 777 *.*
+chmod 777 ./syslinux/*.*
 dd if=/dev/zero of="hard.img" bs=1M count=4
 sudo mkfs.vfat -n 'HARD' -S 512  "hard.img"
 sudo mkdir /mnt/new
